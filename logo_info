@@ -1,0 +1,16 @@
+from pathlib import Path
+from PIL import Image
+
+# Cargar y preparar el logo
+logo_path = Path("/mnt/data/PERFIL.jpg")
+logo = Image.open(logo_path)
+
+# Mostrar información del logo
+logo_info = {
+    "Formato": logo.format,
+    "Tamaño (px)": logo.size,
+    "Modo de color": logo.mode,
+    "Nombre de archivo": logo_path.name
+}
+
+logo_info
